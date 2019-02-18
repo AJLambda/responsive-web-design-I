@@ -69,12 +69,27 @@ h1, h2, h3, h4, h5 {
   margin: 0 auto;
 }
 
+@media( max-width: 800px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media( max-width: 500px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
 
 /* header */
 
 header {
   display: flex;
   flex-direction: row-reverse;
+
 }
 
 @media( max-width: 800px) {
@@ -83,23 +98,38 @@ header {
     align-items: center;
   }
 }
-
+  
 
 header nav {
-  display: flex;
   width: 691px;
   vertical-align: top;
   margin-top: 35px;
 }
 
+@media( max-width: 500px) {
+    header nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100% auto;
+    }
+  }
+
 
 header nav a {
-  display: flex;
   margin-right: 65px;
   font-size: 14px;
   color: grey;
   text-decoration: none;
 }
+
+@media( max-width: 500px) {
+    header nav a {
+    margin: 0 auto;
+    border-top: 1px solid black;
+    }
+  }
+
+
 
 header nav a:hover {
   text-decoration: underline;
@@ -167,6 +197,7 @@ header .logo {
 }
 
 .cta img {
+
   display: flex;
   margin-top: 69px;
 }
@@ -183,6 +214,7 @@ header .logo {
   padding-top: 39px;
   display: flex;
   flex-direction: column;
+  margin-right: 0;
 }
 
 @media( max-width: 800px) {
@@ -192,6 +224,12 @@ header .logo {
     margin-top: 40px;
   }
 }
+
+@media( max-width: 500px) {
+    .main-content {
+    flex-direction: column;
+    }
+  }
 
 .main-content .top-content {
   display: flex;
@@ -206,22 +244,43 @@ header .logo {
   }
 }
 
+@media( max-width: 500px) {
+    .main-content .top-content {
+    flex-direction: column;
+    }
+  }
+
+
 .main-content .top-content .text-content {
   width: 410px;
   display: flex;
   flex-direction: column;
   margin-right: 34px;
+  margin-bottom: 40px;
 }
+@media( max-width: 500px) {
+    .main-content .text-content {
+    width: 100% auto;
+    margin: auto;
+    }
+  }
 
 .main-content .top-content .text-content:last-child {
   margin-right: 0;
 }
 
 .main-content .middle-img {
-  margin-top: 45px;
-  width: auto;
+  margin: 45px auto;
+  width: 100%;
   align-content: center;
 }
+
+@media ( max-width: 800px) {
+    .main-content .middle-img {
+      width: 95%;
+      align-items: center;
+    }
+  }
 
 .main-content .bottom-content {
   display: flex;
@@ -236,6 +295,14 @@ header .logo {
     align-items: center;
   }
 }
+    @media( max-width: 500px) {
+        .main-content .bottom-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        }
+      }
 
 .main-content .bottom-content .text-content {
   width: 275px;
